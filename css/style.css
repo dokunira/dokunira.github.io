@@ -1,22 +1,20 @@
 /* #region common  */
 
-  /* 継承なしだが全てに適用したいプロパティは全称セレクタで指定 */
-  /* 全称セレクタで指定したプロパティは継承より優先されるため */
+  /* 全てに適用したい継承なしのプロパティは全称セレクタで指定 */
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    /* ブラウザによる継承を消したい時も全称セレクタで指定 */
-    /* サイト内容によってはbodyセレクタで書いた方が効率がよい */
+    /* 継承を利用しない場合は継承ありのプロパティも全称セレクタで指定 */
     color: #000;
     list-style: none;
+    font-size: 16px;
+    font-weight: 400;
   }
-
-  /* 継承有りのものはbodyで指定 */
+  
   body {
     font-family: "Helvetica Neue","Arial","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
-    font-size: 20px;
   }
 
   img {
@@ -49,30 +47,34 @@
     display: none;
   }
   
-  header .box .menu.hide{
-    display: none;
-  }
-
-  header .box .close.show{
-    display: block;
-  }
-
   header ul {
     display: none;
-    align-items: center;
-    font-size: 16px;
   }
   
-  header ul.show {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 16px;
-    margin: 8px auto 0;
-    line-height: 28px;
-    background-color: #ccc;
+  header li a {
+    color: #fff;
   }
-
+  
+  @media (max-width: 719px) {
+    header ul.show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 16px;
+      margin: 8px auto 0;
+      line-height: 28px;
+      background: linear-gradient(#173 , 80%, #7b2);
+    }
+    
+    header .box .close.show{
+      display: block;
+    }
+    header .box .menu.hide {
+      display: none;
+    }
+  }
+  
 /* #endregion header  */
 
 /* #region main */
@@ -83,7 +85,7 @@
   
   main>div {
     width: calc(100% - 32px);
-    padding: 48px 20px 0;
+    padding: 48px 16px 0;
     margin: 0 auto;
     background: #fff;
   }
@@ -120,8 +122,8 @@
   .contents {
     width: calc(100% - 32px);
     max-width: 360px;
-    padding: 20px;
-    margin: 20px auto;
+    padding: 20px 40px;
+    margin: 40px auto 20px;
     background: #ccc;
   }
 
@@ -130,7 +132,7 @@
   }
 
   .contents ul {
-    margin: 20px;
+    margin-top: 16px;
     font-size: 16px;
     line-height: 28px;
   }
@@ -145,11 +147,12 @@
 
   .section h2 {
     font-size: 24px;
+    border-bottom: 2px solid #173;
   }
 
   
   .subsection {
-    margin-top: 20px;
+    margin: 20px 0 0 8px;
   }
   
   .subsection h3 {
@@ -167,7 +170,7 @@
 
 /* #region wide_window */
 
-@media (min-width: 724px) {
+@media (min-width: 720px) {
   header {
     display: flex;
   }
@@ -186,6 +189,14 @@
   header ul li {
     padding: 8px;
     background-color: transparent;
+  }
+
+  header li a {
+    color: #000;
+  }
+
+  .hero br {
+    display: none;
   }
 }
 

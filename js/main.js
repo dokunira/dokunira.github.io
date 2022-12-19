@@ -16,4 +16,10 @@
     menu.classList.remove('hide');
     close.classList.remove('show');
   });
+
+  var windowSize = window.innerWidth;
+
+  if (windowSize > 720) {
+    close.click();
+  }
 }
