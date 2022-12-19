@@ -16,7 +16,7 @@
   /* 継承有りのものはbodyで指定 */
   body {
     font-family: "Helvetica Neue","Arial","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   img {
@@ -60,16 +60,16 @@
   header ul {
     display: none;
     align-items: center;
-    font-size: 12px;
+    font-size: 16px;
   }
   
   header ul.show {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 12px;
+    padding: 16px;
     margin: 8px auto 0;
-    line-height: 24px;
+    line-height: 28px;
     background-color: #ccc;
   }
 
@@ -83,7 +83,7 @@
   
   main>div {
     width: calc(100% - 32px);
-    padding: 48px 16px 0;
+    padding: 48px 20px 0;
     margin: 0 auto;
     background: #fff;
   }
@@ -97,18 +97,18 @@
 
   .hero img {
     display: block;
-    margin: 16px auto 0;
+    margin: 20px auto 0;
   }
 
   .hero h1 {
-    margin: 16px;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 24px;
     text-align: center;
   }
 
   .hero p {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     text-align: center;
   }
 
@@ -120,19 +120,19 @@
   .contents {
     width: calc(100% - 32px);
     max-width: 360px;
-    padding: 16px;
-    margin: 16px auto;
+    padding: 20px;
+    margin: 20px auto;
     background: #ccc;
   }
 
   .contents h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .contents ul {
-    margin: 16px;
-    font-size: 12px;
-    line-height: 24px;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 28px;
   }
   /* #endregion contents */
 
@@ -144,21 +144,21 @@
   }
 
   .section h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   
   .subsection {
-    margin-top: 16px;
+    margin-top: 20px;
   }
   
   .subsection h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .subsection p {
     margin-top: 8px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /* #endregion section */
@@ -167,7 +167,7 @@
 
 /* #region wide_window */
 
-@media (min-width: 720px) {
+@media (min-width: 724px) {
   header {
     display: flex;
   }
@@ -180,7 +180,7 @@
     display: flex;
     padding: 0;
     margin: 0 0 0 auto;
-    line-height: 16px;
+    line-height: 20px;
   }
 
   header ul li {
